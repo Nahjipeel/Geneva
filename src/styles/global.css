@@ -1,0 +1,42 @@
+:root { font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif; color: #1d2428; background: #f4f1ea; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f4f1ea; }
+a { color: inherit; }
+.page-shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 56px; display: grid; gap: 38px; }
+.hero { position: relative; overflow: hidden; isolation: isolate; padding: clamp(36px, 7vw, 76px); border-radius: 10px; color: white; background: linear-gradient(120deg, #243238 0%, #41545b 56%, #7f5b0b 140%); box-shadow: 0 18px 38px rgba(29,36,40,.16); }
+.hero-glow { position: absolute; inset: 0; z-index: -1; opacity: .55; background: radial-gradient(circle at 88% 14%, rgba(242,183,5,.6), transparent 36%), repeating-linear-gradient(135deg, transparent 0 20px, rgba(255,255,255,.035) 21px 22px); }
+.hero h1 { max-width: 15ch; margin: 12px 0 18px; font-size: clamp(38px, 6vw, 68px); line-height: 1.02; letter-spacing: -.02em; }
+.hero p { max-width: 62ch; color: #e5ebea; font-size: 17px; }
+.eyebrow { color: #f2b705; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; font-weight: 800; }
+.hero-actions, .action-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-compact h1 { max-width: 18ch; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 10px; border-bottom: 1px solid #d7d2c8; }
+.section-heading p, .page-title p { margin: 5px 0 0; color: #667176; }
+.service-grid, .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.service-grid { margin-top: 18px; }
+.service-card, .gallery-card { display: flex; flex-direction: column; gap: 12px; padding: 18px; min-height: 100%; }
+.service-card p, .gallery-card p, .info-grid p, .service-details p, .aside-stack p { color: #667176; margin: 0; }
+.service-media { display: grid; place-items: center; min-height: 145px; border: 1px solid #d7d2c8; border-radius: 6px; background: #eae6dd; color: #667176; font-size: 42px; }
+.info-grid, .estimate-layout { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+.info-grid > *, .aside-stack > * { padding: 18px; }
+.notice-card { border-color: rgba(200,62,50,.35); background: #fff4f1; }
+.page-title { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.page-title h1 { margin-top: 10px; font-size: clamp(32px, 5vw, 52px); }
+.gallery-grid { margin-top: -12px; }
+.gallery-card img { display: block; width: 100%; height: 190px; object-fit: cover; border-radius: 6px; }
+.gallery-card .muted, .muted { color: #667176; font-size: 13px; }
+.gallery-card p { flex: 1; }
+.gallery-card [role='img'] { color: #667176; }
+.service-details { display: grid; gap: 12px; }
+.service-details > .fui-Card { padding: 18px; }
+.estimate-form { display: grid; gap: 16px; padding: 26px; background: white; border: 1px solid #d7d2c8; border-radius: 10px; box-shadow: 0 8px 20px rgba(29,36,40,.12); }
+.estimate-form textarea { min-height: 120px; }
+.form-error { padding: 12px; color: #8b241d; background: #fff4f1; border: 1px solid #e4aba5; border-radius: 6px; }
+.aside-stack { display: grid; align-content: start; gap: 16px; }
+.aside-stack a { color: #765800; font-weight: 700; }
+.status-placeholder { display: grid; place-items: center; min-height: 100px; margin: 12px 0; color: #667176; background: #eae6dd; border: 1px solid #d7d2c8; border-radius: 6px; }
+.success-panel { padding: 32px; background: #e8f4ed; border: 1px solid #9bc9ae; border-radius: 10px; }
+.success-panel svg { color: #2f7d5a; font-size: 32px; }
+.success-panel h2 { margin: 10px 0; }
+.site-footer { display: flex; justify-content: space-between; gap: 16px; padding: 22px clamp(16px, 5vw, 56px); background: #1d2428; color: #cbd4d5; font-size: 13px; }
+@media (max-width: 760px) { .page-shell { width: min(100% - 24px, 620px); padding-top: 24px; } .service-grid, .gallery-grid, .info-grid, .estimate-layout { grid-template-columns: 1fr; } .page-title { display: grid; gap: 10px; } .site-footer { flex-direction: column; } }

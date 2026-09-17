@@ -1,0 +1,10 @@
+{
+  "name": "geneva-body-shop-functions",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/src/functions/estimate.js",
+  "scripts": { "build": "tsc", "start": "func start" },
+  "dependencies": { "@azure/functions": "^4.7.2" },
+  "devDependencies": { "@types/node": "^24.3.0", "typescript": "^5.9.2" }
+}
